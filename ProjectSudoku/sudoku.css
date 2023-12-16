@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: block;
+    box-shadow: 0 0px 200px 130px rgb(100 230 70 / 90%) inset;
+    /* width: 100vw; */
+    /* height: 100vh; */
+    text-align: center;
+}
+
+
+.game {
+    padding-top: 2%;
+}
+
+.btn {
+    margin: 15px;
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+.btn-15 {
+    background: #b621fe;
+    border: none;
+    z-index: 1;
+}
+
+.btn-15:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #663dff;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    transition: all 0.3s ease;
+}
+
+.btn-15:hover {
+    color: #fff;
+}
+
+.btn-15:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+.btn-15:active {
+    top: 2px;
+}
+
+#timeInput {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    /* Цвет текста */
+    background-color: #333;
+    /* Цвет фона */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    /* Тень вокруг элемента */
+}
+
+#timeInput:disabled {
+    /* Стили для отключенного (readonly) состояния */
+    background-color: #555;
+    /* Цвет фона в отключенном состоянии */
+    color: #ccc;
+    /* Цвет текста в отключенном состоянии */
+    box-shadow: none;
+    /* Убираем тень */
+}
+
+.sudoku-grid {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    color: black;
+    font-weight: bold;
+}
+
+.bigCube {
+    width: 120px;
+}
+
+.table-game {
+    width: 360px;
+}

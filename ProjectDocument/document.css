@@ -1,3 +1,7 @@
+:root {
+    --borderSize: 2px;
+}
+
 * {
     font-family: 'Arial', sans-serif;
     margin: 0;
