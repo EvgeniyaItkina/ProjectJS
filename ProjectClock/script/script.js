@@ -8,9 +8,6 @@ class WorldClock {
         this.currentTimeElement.style.display = 'none';
         this.intervalId = null; // Добавляем переменную для хранения идентификатора интервала
 
-
-        this.populateCountrySelect();
-        this.setupEventListeners();
     }
 
     populateCountrySelect() {
@@ -42,14 +39,18 @@ class WorldClock {
                 if (this.intervalId !== null) {
                     clearInterval(this.intervalId);
                 }
-
-                const currentTime = new Date().toLocaleString('en-US', { timeZone: selectedCountry.timezone });
+                //формат времени 00:00:00
+                const currentTime = new Date(new Date().toLocaleString('en-US', { timeZone: selectedCountry.timezone }));
+                const hours = currentTime.getHours().toString().padStart(2, '0');
+                const minutes = currentTime.getMinutes().toString().padStart(2, '0');
+                const seconds = currentTime.getSeconds().toString().padStart(2, '0');
+                const formattedTime = `${hours}:${minutes}:${seconds}`;
 
                 // Устанавливаем новый интервал и сохраняем его идентификатор
                 this.intervalId = setInterval(updateClock, 1000);
 
                 // Добавляем новую информацию в текущий элемент
-                this.currentTimeElement.innerHTML = `Current Time in ${selectedCountry.name} : <br>${currentTime}`;
+                this.currentTimeElement.innerHTML = `Current Time in ${selectedCountry.name} : <br>${formattedTime}`;
 
                 if (this.currentTimeElement.style.display === 'none') {
                     this.currentTimeElement.style.display = 'block'; // Показываем #currentTime при первом вызове
