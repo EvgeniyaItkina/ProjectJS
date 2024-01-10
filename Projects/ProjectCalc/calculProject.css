@@ -1,0 +1,79 @@
+/* calulProject.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle, rgba(252, 70, 107, 1) 0%, rgba(63, 94, 251, 1) 100%);
+}
+
+.container {
+    /*     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; */
+    /* max-width: 300px; */
+    text-align: center;
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+}
+
+#userInput {
+    font-size: 2em;
+    margin-bottom: 10px;
+    width: 12em;
+
+}
+
+.calculator {
+
+
+
+    padding: 5px;
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: 25% 25% 25% 15%;
+    gap: 10px;
+    /* max-width: 300px; */
+    text-align: center;
+}
+
+button {
+    font-size: 20px;
+    padding: 0.8em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+#clean:hover,
+#delite:hover {
+    background-color: #d32f2f;
+}
+
+/* Анимация для кнопок при клике */
+@keyframes buttonClick {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+button:active {
+    animation: buttonClick 0.3s ease;
+}
