@@ -445,7 +445,8 @@ screen and (max-width:1200px) {
         margin: auto;
     }
 
-    .project {
+    .project,
+    .projectJs {
         display: flex;
         flex-direction: column;
     }
