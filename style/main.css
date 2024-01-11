@@ -269,8 +269,78 @@ header section p {
         'text text text'
         'picture1 picture2 picture3'
         'picture4 picture5 picture6'
-        'picture7 picture8 picture9'
         '. picture8 .'
+    ;
+    place-items: center;
+    gap: 20px;
+}
+
+.projectJs h2 {
+    font-family: heebo;
+    grid-area: titleJs;
+    font-size: 53px;
+}
+
+.projectJs p {
+    font-family: heebo;
+    grid-area: textJs;
+    font-size: 29px;
+    text-align: center;
+}
+
+.projectJs1 {
+    grid-area: pictureJs1;
+    background-image: url(../images/projectJs1.jpg);
+}
+
+.projectJs2 {
+    grid-area: pictureJs2;
+    background-image: url(../images/projectJs2.jpg);
+    background-size: 180px 220px;
+}
+
+.projectJs3 {
+    grid-area: pictureJs3;
+    background-image: url(../images/projectJs3.jpg);
+    background-size: 180px 220px;
+
+}
+
+.projectJs4 {
+    grid-area: pictureJs4;
+    background-image: url(../images/projectJs4.jpg);
+    background-size: 180px 220px;
+}
+
+.projectJs5 {
+    grid-area: pictureJs5;
+    background-image: url(../images/projectJs5.jpg);
+    background-size: 180px 220px;
+}
+
+.projectJs6 {
+    grid-area: pictureJs6;
+    background-image: url(../images/projectJs6.jpg);
+    background-size: 180px 220px;
+}
+
+.projectJs7 {
+    grid-area: pictureJs7;
+    background-image: url(../images/projectJs7.jpg);
+    background-size: 180px 220px;
+}
+
+.projectJs {
+    padding: 100px 0;
+    background-color: rgba(223, 223, 223, 0.5);
+    display: grid;
+    text-align: center;
+    grid-template-areas:
+        'titleJs titleJs titleJs'
+        'textJs textJs textJs'
+        'pictureJs1 pictureJs2 pictureJs3'
+        'pictureJs4 pictureJs5 pictureJs6'
+        '. pictureJs7 .';
     ;
     place-items: center;
     gap: 20px;
