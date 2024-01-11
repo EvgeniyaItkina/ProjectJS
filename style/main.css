@@ -408,6 +408,7 @@ screen and (max-width:1200px) {
         display: none;
         margin: 300px 0 0 50%;
         background-color: #ccc;
+        font-size: 1em;
     }
 
     .humburger {
@@ -419,7 +420,13 @@ screen and (max-width:1200px) {
     .nav-home:hover {
         display: block;
         width: 50%;
+
         position: absolute;
+    }
+
+
+    .dropdown-item {
+        font-size: 1em;
     }
 
     header section h1 {
