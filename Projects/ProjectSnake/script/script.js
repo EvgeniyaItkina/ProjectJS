@@ -120,6 +120,38 @@ function startGame() {
     }
 
     let game = setInterval(drawGame, 100);
+
+    // Функция для обработки начала касания
+    function handleTouchStart(event) {
+        const touchStartX = event.touches[0].clientX;
+        const touchStartY = event.touches[0].clientY;
+
+        function handleTouchMove(moveEvent) {
+            // Предотвращаем стандартное поведение
+            moveEvent.preventDefault();
+
+            const touchEndX = moveEvent.touches[0].clientX;
+            const touchEndY = moveEvent.touches[0].clientY;
+
+            const diffX = touchStartX - touchEndX;
+            const diffY = touchStartY - touchEndY;
+
+            if (Math.abs(diffX) > Math.abs(diffY)) { // Горизонтальный свайп
+                if (diffX > 0 && dir != "right") dir = "left"; // Свайп влево
+                else if (diffX < 0 && dir != "left") dir = "right"; // Свайп вправо
+            } else { // Вертикальный свайп
+                if (diffY > 0 && dir != "down") dir = "up"; // Свайп вверх
+                else if (diffY < 0 && dir != "up") dir = "down"; // Свайп вниз
+            }
+
+            canvas.removeEventListener('touchmove', handleTouchMove);
+        }
+
+        canvas.addEventListener('touchmove', handleTouchMove);
+    }
+
+    // Назначение обработчиков сенсорных событий
+    canvas.addEventListener('touchstart', handleTouchStart);
 }
 startGame()
 
