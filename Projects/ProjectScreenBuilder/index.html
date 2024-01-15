@@ -11,59 +11,57 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="workSpace">
-            <div class="whiteSheet"></div>
-        </div>
-        <div class="form">
-            <h1>Make your Document</h1>
-            <p>
-                Try this game
-            </p>
+    <h1>This is Screen Builder</h1>
+    <label for="element">Type of Element</label>
+    <select class="element" id="element">
+        <option selected disabled>---------</option>
+        <option value="span">Span</option>
+        <option value="div">Div</option>
+        <option value="paragraph">Paragraph</option>
+        <option value="h1">Title h1</option>
+        <option value="h2">Title h2</option>
+        <option value="h3">Title h3</option>
+    </select>
 
-            <label for="element">Type of Element</label>
-            <select class="element" id="element">
-                <option selected disabled>---------</option>
-                <option value="Div">Div</option>
-                <option value="Paragraph">Paragraph</option>
-                <option value="Title">Title</option>
-            </select>
+    <label for="divi">Background Div</label>
+    <input type="text" name="divi" id="bgColor">
 
-            <label for="width">Width(px)</label>
-            <input type="number" name="width" id="width">
+    <label for="width">Width in px</label>
+    <input type="number" name="width" id="width">
 
-            <label for="hight">Hight(px)</label>
-            <input type="number" name="hight" id="height">
+    <label for="height">Height in px</label>
+    <input type="number" name="height" id="height">
 
-            <!-- 
-            <label for="write">Write Here</label>
-            <textarea name="write" id="write"></textarea> -->
+    <label for="textarea">Write Text</label>
+    <textarea type="textarea" name="textarea" id="textarea"></textarea>
 
-            <label for="color">Chouse color</label>
-            <input type="color" name="color" id="color" value="#ff0000">
+    <label for="font-size">Font Size</label>
+    <input type="number" name="font-size" id="font-size"></input>
 
-            <!--             <label for="place">Place</label>
-            <select class="place" name="place">
-                <option selected disabled>---------</option>
-                <option>Upp Right</option>
-                <option>Upp Center</option>
-                <option>Upp Left</option>
-                <option>Center Right</option>
-                <option>Center Center</option>
-                <option>Center Left</option>
-                <option>Down Right</option>
-                <option>Down Center</option>
-                <option>Down Left</option>
-            </select> -->
+    <label for="font-color">Font Color</label>
+    <input type="text" name="font-color" id="font-color"></input>
+
+    <label for="widthBorder">Width of Border</label>
+    <input type="number" name="widthBorder" id="widthBorder"></input>
+
+    <label for="radiusBorder">Radius of Border</label>
+    <input type="number" name="radiusBorder" id="radiusBorder"></input>
+
+    <label for="colorBorder">Color Border</label>
+    <input type="text" name="colorBorder" id="colorBorder"></input>
+
+    <label for="padding">Padding</label>
+    <input type="number" name="padding" id="padding"></input>
+
+    <label for="margin">Margin</label>
+    <input type="number" name="margin" id="margin"></input>
 
 
 
-            <input type="button" onclick="doIt()" name="doIt" id="doIt" value="Create">
-            <input type="button" onclick="cleanForm()" name="cleanForm" id="cleanForm" value="Clean Form">
-            <input type="button" onclick="cleanAll()" name="cleanAll" id="cleanALL" value="Clean All">
 
-        </div>
-    </div>
+
+
+    <button id="btn_doIt">Create</button>
 
 </body>
 

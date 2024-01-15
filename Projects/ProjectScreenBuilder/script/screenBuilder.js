@@ -1,38 +1,40 @@
-/* let elementText = document.getElementById('write').value;
+function createDiv() {
+    let element = document.getElementById('element').value;
 
-let elementPlace = document.querySelector('.place').value;  */
+    const newDiv = document.createElement(`${element}`);
+    let bgColor = document.getElementById("bgColor").value;
+    let width = document.getElementById("width").value;
+    let height = document.getElementById("height").value;
+    let text = document.getElementById("textarea").value;
+    let font_size = document.getElementById("font-size").value;
+    let font_color = document.getElementById("font-color").value;
+    let widthBorder = document.getElementById("widthBorder").value;
+    let colorBorder = document.getElementById("colorBorder").value;
+    let radiusBorder = document.getElementById("radiusBorder").value;
+    let padding = document.getElementById("padding").value;
+    let margin = document.getElementById("margin").value;
 
 
-function doIt() {
 
-    const elementType = document.getElementById("element").value;
-    const elementColor = document.getElementById('color').value;
-    const elementWidth = document.getElementById('width').value + 'px';
-    const elementHeight = document.getElementById('height').value + 'px';
-    console.log(elementType);
-    console.log(elementColor);
-    console.log(elementWidth);
-    console.log(elementHeight);
-    switch (elementType) {
-        case "Div":
-            document.querySelector(".whiteSheet").innerHTML += `<div style='background-color:${elementColor}; width:${elementWidth}; height:${elementHeight}; border: 1px solid black '></div>`;
-            break;
-        case "Paragraph":
-            document.querySelector(".whiteSheet").innerHTML += `<p style='color:${elementColor}; font-size: 1.2em'>Hello Word</p>`;
-            break;
-        case "Title":
-            document.querySelector(".whiteSheet").innerHTML += `<h1 style='color:${elementColor}; font-size: 1.2em''>This is a Title</h1>`;
-            break;
+    newDiv.id = 'div';
+    newDiv.className = "divCSS";
+    newDiv.style.width = `${width}px`;
+    newDiv.style.height = `${height}px`;
+    newDiv.style.border = `${widthBorder}px solid ${colorBorder}`;
+    newDiv.style.borderRadius = `${radiusBorder}px `;
+    newDiv.style.backgroundColor = bgColor;
+    newDiv.textContent = text;
+    newDiv.style.fontSize = `${font_size}px`;
+    newDiv.style.color = `${font_color}px`;
 
-        default:
-            break;
-    }
+    newDiv.style.padding = `${padding}px`;
+    newDiv.style.margin = `${margin}px`;
 
+
+
+    document.body.appendChild(newDiv);
 
 }
-function cleanForm() {
+document.getElementById('btn_doIt').addEventListener('click', createDiv)
 
-}
-function cleanAll() {
 
-}

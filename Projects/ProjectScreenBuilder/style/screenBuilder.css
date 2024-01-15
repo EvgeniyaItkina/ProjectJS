@@ -1,39 +1,10 @@
-:root {
-    --borderSize: 2px;
-}
-
 * {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.container {
-
-    background-color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.whiteSheet {
-    border: 1px solid #000;
-    width: 75vw;
-    height: 90vh;
-    margin: 10px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.form {
-    width: 40%;
-    height: 90%;
-    padding: 20px;
-    margin: 15px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
 
 h1,
 p {
@@ -61,7 +32,7 @@ textarea {
     box-sizing: border-box;
 }
 
-#doIt {
+#btn_doIt {
     background-color: #4caf50;
     color: white;
     padding: 10px 15px;
@@ -70,19 +41,6 @@ textarea {
     cursor: pointer;
 }
 
-#doIt:hover {
+#btn_doIt:hover {
     background-color: #0a470d;
-}
-
-#clean {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#clean:hover {
-    background-color: red;
 }
