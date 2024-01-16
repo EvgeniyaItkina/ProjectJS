@@ -1,34 +1,58 @@
-const tableGame = document.querySelector('.table-game')
-/* for (x = 0; x < 9; x++) {
-    for (y = 0; y < 9; y++) {
-        //создаем клетку
-        const cell = document.createElement("input");
+import { generateSudoku } from "./sudokuGenerator.js";
 
-        //присваеваем цифровой тип клетке
-        cell.setAttribute("type", "number")
-        cell.setAttribute("id", x + "_" + y)
-        cell.classList.add('sudoku-grid')
-        tableGame.appendChild(cell)
+export class Sudoku {
+    constructor() {
+        this.grid = generateSudoku();
     }
-} */
+    getDuplicatePositions(row, column, value) {
+        const duplicatesInColumn = this.getDuplicatePositionsInColumn(row, column, value)
+        const duplicatesInRow = this.getDuplicatePositionsInRow(row, column, value);
+        const duplicatesInBox = this.getDuplicatePositionsInBox(row, column, value);
 
+        const duplicates = [...duplicatesInColumn, ...duplicatesInRow];
+        duplicatesInBox.forEach(duplicateInBox => {
+            if (duplicateInBox.row !== row && duplicateInBox.column !== column) duplicates.push(duplicateInBox);
+        });
 
-for (let i_big = 0; i_big < 3; i_big++) {
-    for (let j_big = 0; j_big < 3; j_big++) {
-        const bigCube = document.createElement("div")
-        bigCube.classList.add('bigCube')
+        return duplicates;
+    }
 
-        //add small cube
-        for (let i_small = 0; i_small < 3; i_small++) {
-            for (let j_small = 0; j_small < 3; j_small++) {
-                const cell = document.createElement("input");
-                cell.setAttribute("type", "number")
-                cell.setAttribute("id", i_big + "_" + j_big + "_" + i_small + "_" + j_small)
-                cell.classList.add('sudoku-grid')
-                bigCube.appendChild(cell)
+    getDuplicatePositionsInColumn(row, column, value) {
+        const duplicates = [];
+        for (let iRow = 0; iRow < GRID_SIZE; iRow++) {
+            if (this.grid[iRow][column] === value && iRow !== row) {
+                duplicates.push({ row: iRow, column });
             }
         }
-        tableGame.appendChild(bigCube)
+        return duplicates;
     }
 
+    getDuplicatePositionsInRow(row, column, value) {
+        const duplicates = [];
+        for (let iColumn = 0; iColumn < GRID_SIZE; iColumn++) {
+            if (this.grid[row][iColumn] === value && iColumn !== column) {
+                duplicates.push({ row, column: iColumn });
+            }
+        }
+        return duplicates;
+    }
+
+    getDuplicatePositionsInBox(row, column, value) {
+        const duplicates = [];
+        const firstRowInBox = row - row % BOX_SIZE;
+        const firstColumnInBox = column - column % BOX_SIZE;
+
+        for (let iRow = firstRowInBox; iRow < firstRowInBox + BOX_SIZE; iRow++) {
+            for (let iColumn = firstColumnInBox; iColumn < firstColumnInBox + BOX_SIZE; iColumn++) {
+                if (this.grid[iRow][iColumn] === value && iRow !== row && iColumn !== column) {
+                    duplicates.push({ row: iRow, column: iColumn });
+                }
+            }
+        }
+        return duplicates;
+    }
+
+    hasEmptyCells() {
+        return Boolean(findEmptyCell(this.grid));
+    }
 }

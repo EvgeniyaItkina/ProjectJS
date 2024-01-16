@@ -11,57 +11,72 @@
 </head>
 
 <body>
-    <h1>This is Screen Builder</h1>
-    <label for="element">Type of Element</label>
-    <select class="element" id="element">
-        <option selected disabled>---------</option>
-        <option value="span">Span</option>
-        <option value="div">Div</option>
-        <option value="paragraph">Paragraph</option>
-        <option value="h1">Title h1</option>
-        <option value="h2">Title h2</option>
-        <option value="h3">Title h3</option>
-    </select>
+    <div class="container">
+        <div id="workSpace">
+            <div id="whiteSheet">
+                <div class="massage">
+                    <p> Are you sure?</p>
+                    <button id="yes">Yes</button>
+                    <button id="no">No</button>
+                </div>
 
-    <label for="divi">Background Div</label>
-    <input type="text" name="divi" id="bgColor">
+            </div>
+        </div>
+        <div id="formSpace">
+            <h1>This is Screen Builder</h1>
+            <label for="element">Type of Element</label>
+            <select class="element" id="element">
+                <option selected disabled>---------</option>
+                <option value="span">Span</option>
+                <option value="div">Div</option>
+                <option value="paragraph">Paragraph</option>
+                <option value="h1">Title h1</option>
+                <option value="h2">Title h2</option>
+                <option value="h3">Title h3</option>
+            </select>
 
-    <label for="width">Width in px</label>
-    <input type="number" name="width" id="width">
+            <label for="divi">Background</label>
+            <input type="text" name="divi" id="bgColor">
 
-    <label for="height">Height in px</label>
-    <input type="number" name="height" id="height">
+            <label for="width">Width in px</label>
+            <input type="number" name="width" id="width">
 
-    <label for="textarea">Write Text</label>
-    <textarea type="textarea" name="textarea" id="textarea"></textarea>
+            <label for="height">Height in px</label>
+            <input type="number" name="height" id="height">
 
-    <label for="font-size">Font Size</label>
-    <input type="number" name="font-size" id="font-size"></input>
+            <label for="textarea">Write Text</label>
+            <textarea type="textarea" name="textarea" id="textarea"></textarea>
 
-    <label for="font-color">Font Color</label>
-    <input type="text" name="font-color" id="font-color"></input>
+            <label for="font-size">Font Size in px</label>
+            <input type="number" name="font-size" id="font-size"></input>
 
-    <label for="widthBorder">Width of Border</label>
-    <input type="number" name="widthBorder" id="widthBorder"></input>
+            <label for="font-color">Font Color</label>
+            <input type="text" name="font-color" id="font-color"></input>
 
-    <label for="radiusBorder">Radius of Border</label>
-    <input type="number" name="radiusBorder" id="radiusBorder"></input>
+            <label for="widthBorder">Width of Border px</label>
+            <input type="number" name="widthBorder" id="widthBorder"></input>
 
-    <label for="colorBorder">Color Border</label>
-    <input type="text" name="colorBorder" id="colorBorder"></input>
+            <label for="radiusBorder">Radius of Border</label>
+            <input type="number" name="radiusBorder" id="radiusBorder"></input>
 
-    <label for="padding">Padding</label>
-    <input type="number" name="padding" id="padding"></input>
+            <label for="colorBorder">Color Border</label>
+            <input type="text" name="colorBorder" id="colorBorder"></input>
 
-    <label for="margin">Margin</label>
-    <input type="number" name="margin" id="margin"></input>
+            <label for="padding">Padding</label>
+            <input type="number" name="padding" id="padding"></input>
+
+            <label for="margin">Margin</label>
+            <input type="number" name="margin" id="margin"></input>
 
 
+            <div id="btn_box">
+                <button class="btn btn_doIt">Create</button>
+                <button class="btn btn_clear">Clear</button>
+                <button class="btn btn_save">Save</button>
+            </div>
+        </div>
+    </div>
 
-
-
-
-    <button id="btn_doIt">Create</button>
 
 </body>
 
