@@ -44,9 +44,9 @@ h1 {
 }
 
 label {
-    font-size: 0.6em;
+    font-size: 0.8em;
     font-weight: 800;
-    display: block;
+    /* display: block; */
     margin-top: 5px;
 }
 
@@ -63,6 +63,15 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+.box1 {
+    display: flex;
+}
+
+.box1 label {
+    margin: 5px;
+    padding: 5px;
 }
 
 #btn_box {

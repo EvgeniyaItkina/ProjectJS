@@ -7,7 +7,7 @@
     <title>Screen Builder</title>
     <link rel="stylesheet" href="../ProjectScreenBuilder/style/screenBuilder.css">
 
-    <script defer src="../ProjectScreenBuilder/script/screenBuilder.js"></script>
+    <script defer type="module" src="../ProjectScreenBuilder/script/screenBuilder.js"></script>
 </head>
 
 <body>
@@ -34,25 +34,26 @@
                 <option value="h2">Title h2</option>
                 <option value="h3">Title h3</option>
             </select>
-
+            <br>
             <label for="divi">Background</label>
             <input type="text" name="divi" id="bgColor">
-
-            <label for="width">Width in px</label>
-            <input type="number" name="width" id="width">
-
-            <label for="height">Height in px</label>
-            <input type="number" name="height" id="height">
+            <br>
+            <div class="box1">
+                <label for="width">Width in px</label>
+                <input type="number" name="width" id="width">
+                <label for="height">Height in px</label>
+                <input type="number" name="height" id="height">
+            </div>
 
             <label for="textarea">Write Text</label>
             <textarea type="textarea" name="textarea" id="textarea"></textarea>
-
+            <br>
             <label for="font-size">Font Size in px</label>
             <input type="number" name="font-size" id="font-size"></input>
 
             <label for="font-color">Font Color</label>
             <input type="text" name="font-color" id="font-color"></input>
-
+            <br>
             <label for="widthBorder">Width of Border px</label>
             <input type="number" name="widthBorder" id="widthBorder"></input>
 
@@ -61,7 +62,7 @@
 
             <label for="colorBorder">Color Border</label>
             <input type="text" name="colorBorder" id="colorBorder"></input>
-
+            <br>
             <label for="padding">Padding</label>
             <input type="number" name="padding" id="padding"></input>
 
