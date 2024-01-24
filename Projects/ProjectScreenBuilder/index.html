@@ -14,12 +14,6 @@
     <div class="container">
         <div id="workSpace">
             <div id="whiteSheet">
-                <div class="massage">
-                    <p> Are you sure?</p>
-                    <button id="yes">Yes</button>
-                    <button id="no">No</button>
-                </div>
-
             </div>
         </div>
         <div id="formSpace">
@@ -36,7 +30,7 @@
             </select>
             <br>
             <label for="divi">Background</label>
-            <input type="text" name="divi" id="bgColor">
+            <input type="color" name="divi" id="bgColor">
             <br>
             <div class="box1">
                 <label for="width">Width in px</label>
@@ -61,7 +55,7 @@
             <input type="number" name="radiusBorder" id="radiusBorder"></input>
 
             <label for="colorBorder">Color Border</label>
-            <input type="text" name="colorBorder" id="colorBorder"></input>
+            <input type="color" name="colorBorder" id="colorBorder"></input>
             <br>
             <label for="padding">Padding</label>
             <input type="number" name="padding" id="padding"></input>
@@ -74,7 +68,18 @@
                 <button class="btn btn_doIt">Create</button>
                 <button class="btn btn_clear">Clear</button>
                 <button class="btn btn_save">Save</button>
+                <button class="btn btn_load">Load</button>
             </div>
+        </div>
+        <div class="massageClear">
+            <p> Clear All(Include Local Storage). Are you sure?</p>
+            <button id="yesClear">Yes</button>
+            <button id="noClear">No</button>
+        </div>
+        <div class="massageLoad">
+            <p>Load Your History. Are you sure?</p>
+            <button id="yesLoad">Yes</button>
+            <button id="noLoad">No</button>
         </div>
     </div>
 

@@ -1,14 +1,15 @@
 import { createElement } from "./createElement.js";
 import { save } from "./saveElement.js";
+import { load, loadElements } from "./loadElements.js";
 
 
 document.querySelector('.btn_doIt').addEventListener('click', createElement)
 
 document.querySelector('.btn_clear').addEventListener('click', () => {
-    document.querySelector('.massage').style.display = "block";
+    document.querySelector('.massageClear').style.display = "block";
 
 
-    document.getElementById('yes').addEventListener('click', () => {
+    document.getElementById('yesClear').addEventListener('click', () => {
         document.getElementById('whiteSheet').innerHTML = "";
         document.getElementById('element').value = "";
         document.getElementById("bgColor").value = "";
@@ -22,13 +23,15 @@ document.querySelector('.btn_clear').addEventListener('click', () => {
         document.getElementById("radiusBorder").value = "";
         document.getElementById("padding").value = "";
         document.getElementById("margin").value = "";
-        document.querySelector('.massage').style.display = "none";
+        document.querySelector('.massageClear').style.display = "none";
         localStorage.clear()
     })
 
-    document.getElementById('no').addEventListener('click', () => {
-        document.querySelector('.massage').style.display = "none";
+    document.getElementById('noClear').addEventListener('click', () => {
+        document.querySelector('.massageClear').style.display = "none";
     })
 
 })
 document.querySelector('.btn_save').addEventListener('click', save)
+document.querySelector('.btn_load').addEventListener('click', loadElements)
+load()

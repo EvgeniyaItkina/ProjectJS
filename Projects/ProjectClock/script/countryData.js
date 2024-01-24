@@ -1,5 +1,10 @@
 const getNameCountries = async (name) => {
-    const response = await fetch(`https://restcountries.com/v3.1/name/${name}`);
+    try {
+        const response = await fetch(`https://restcountries.com/v3.1/name/${name}`);
+    }
+    catch {
+        console.error(`Download error: ${error.message}`);
+    }
     return await response.json();
 }
 
