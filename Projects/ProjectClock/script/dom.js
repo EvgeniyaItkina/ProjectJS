@@ -1,6 +1,8 @@
 import { getNameCountries, search } from "./countryData.js";
 
+
 document.getElementById('searchButton').addEventListener('click', async () => {
+    document.getElementById('countryInfo').style.display = "block";
     const countryName = document.getElementById('countryInput').value;
     const countryInfo = await search(countryName);
 
@@ -14,12 +16,16 @@ document.getElementById('searchButton').addEventListener('click', async () => {
     }
 });
 
+let timeInterval;
+
 const updateCurrentTime = (timezone = "") => {
-    // console.log(timezone);
+    if (timeInterval) {
+        clearInterval(timeInterval); // Очищаем предыдущий интервал
+    }
+
     const sign = timezone[3]; //+
     const countHoursString = timezone.substring(4, 6);
     const countHoursNumber = Number(countHoursString);
-    //console.log(typeof (countHoursNumber), countHoursNumber);
 
     let newHours = 0;
     if (sign == "+") {
@@ -28,18 +34,32 @@ const updateCurrentTime = (timezone = "") => {
     } else {
         newHours = -countHoursNumber;
     }
-
     updateTime(newHours);
-    setInterval(updateTime, 1000, newHours);
+    timeInterval = setInterval(() => updateTime(newHours), 1000);
+    /* setInterval(updateTime, 1000, newHours); */
 }
 
-const updateTime = (offSet) => {
+/* const updateTime = (offSet) => {
     const nowTime = new Date();
     const hoursFromDate = nowTime.getHours();
     const newHours = hoursFromDate + offSet;
     nowTime.setHours(newHours);
     console.log(nowTime);
 
-    /* const currentTime = new Date().toLocaleTimeString('en-US', { timeZone: timezone }); */
+    document.getElementById('currentTime').innerHTML = "";
     document.getElementById('currentTime').innerHTML = `Current Time: ${nowTime}`;
+} */
+
+const updateTime = (offSet) => {
+    const nowTime = new Date();
+    nowTime.setHours(nowTime.getHours() + offSet);
+
+    // Форматирование времени для отображения только часов и минут
+    const formattedTime = nowTime.toLocaleTimeString('en-US', {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    });
+
+    document.getElementById('currentTime').textContent = `Current Time: ${formattedTime}`;
 }

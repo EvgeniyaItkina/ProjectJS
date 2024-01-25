@@ -1,13 +1,14 @@
 const getNameCountries = async (name) => {
+    let response;
     try {
-        const response = await fetch(`https://restcountries.com/v3.1/name/${name}`);
+        response = await fetch(`https://restcountries.com/v3.1/name/${name}`);
+        return await response.json();
     }
     catch {
         console.error(`Download error: ${error.message}`);
+        return null
     }
-    return await response.json();
 }
-
 
 const search = async (countryName) => {
     const countries = await getNameCountries(countryName);
@@ -16,8 +17,3 @@ const search = async (countryName) => {
 }
 
 export { getNameCountries, search }
-
-/*  let hr = time.getHours();
-         let mn = time.getMinutes();
-         let sc = time.getSeconds();
-         let clock = `${hr}:${mn}:${sc}` */

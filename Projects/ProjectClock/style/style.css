@@ -7,7 +7,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 80vh;
     background-image: url('../images/nightSky.jpg');
 }
 
@@ -44,7 +44,6 @@ span {
     width: 30px;
 }
 
-/* Пробел между словами */
 .span6 {
     color: #18ffff;
 }
@@ -77,24 +76,65 @@ label {
     font-size: 3em;
     font-weight: bolder;
     margin: 10px;
-    color: #26315c;
+    color: #000000;
 }
 
-#countrySelect {
+#countryInput {
     font-size: 1.5em;
-    padding: 8px;
-    margin: 8px;
-    border: 15px groove #ccc;
+    padding: 10px;
+    border: 2px solid #4caf50;
     border-radius: 5px;
-    background-color: #b3b8d3;
-    transition: border-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s;
 }
 
+#countryInput:focus {
+    border-color: #3f51b5;
+    outline: none;
+}
+
+#searchButton {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1.5em;
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#searchButton:hover {
+    background-color: #313131;
+}
+
+#countryInfo {
+    display: none;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+#countryFlag img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+#countryName,
+#countryCapital {
+    font-size: 1.3em;
+    margin: 10px 0;
+}
 
 #currentTime {
-    display: none;
     color: #b22828;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     text-align: center;
     padding: 20px;
@@ -108,25 +148,32 @@ label {
     color: #FFD700;
 }
 
-.countryName {
-    font-weight: bold;
-}
 
 @media screen and (max-width: 768px) {
+    body {
+        height: 100vh;
+    }
+
     h1 {
-        font-size: 4em;
+        font-size: 3em;
     }
 
     label {
         font-size: 2em;
     }
 
-    #countrySelect {
+    #countryInput,
+    #searchButton {
         font-size: 1em;
     }
 
-    #currentTime {
+    #countryName,
+    #countryCapital {
         font-size: 1.5em;
+    }
+
+    #currentTime {
+        font-size: 1em;
         padding: 10px;
     }
 }
