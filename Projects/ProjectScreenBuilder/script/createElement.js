@@ -1,5 +1,7 @@
 export function createElement() {
-    let element = document.getElementById('element').value;
+    const selectedElement = document.getElementById("element");
+    const element = selectedElement.options[selectedElement.selectedIndex].value;
+
 
     const bgColor = document.getElementById("bgColor").value;
     const width = document.getElementById("width").value;
@@ -12,6 +14,10 @@ export function createElement() {
     const radiusBorder = document.getElementById("radiusBorder").value;
     const padding = document.getElementById("padding").value;
     const margin = document.getElementById("margin").value;
+    const boxShadowX = document.getElementById("boxShadowX").value;
+    const boxShadowY = document.getElementById("boxShadowY").value;
+    const boxShadowBlur = document.getElementById("boxShadowBlur").value;
+
 
     const newElement = document.createElement(`${element}`);
 
@@ -27,6 +33,7 @@ export function createElement() {
     newElement.style.color = `${font_color}`;
     newElement.style.padding = `${padding}px`;
     newElement.style.margin = `${margin}px`;
+    newElement.style.boxShadow = `${boxShadowX}px ${boxShadowY}px ${boxShadowBlur}px rgba(0, 0, 0, 0.9)`;
 
 
     document.getElementById('whiteSheet').appendChild(newElement);

@@ -1,21 +1,45 @@
 let firstNumber, secondNumber, action = null
 let decimalClicked = false
+const userInput = document.getElementById("userInput");
+let validationUserInput = "";
+userInput.focus();
+userInput?.addEventListener('input', () => {
+    const number = +userInput.value
+    console.log(number)
+    console.log(typeof (number));
+    console.log(userInput.value);
+    /*  if (typeof number != "number") {
+         //not a number
+         userInput.value = validationUserInput;
+         return
+     }
+     validationUserInput = userInput.value; */
 
+
+
+    /*  if (action == null) {
+         firstNumber = +userInput.value
+         //console.log(firstNumber);
+     } else {
+         secondNumber = +userInput.value;
+         // console.log(secondNumber);
+     } */
+})
 
 function clickNumber(number) {
-    document.getElementById("userInput").value += number;
-
+    userInput.value += number;
+    console.log(number)
+    console.log(typeof (number));
 
     if (action == null) {
-        firstNumber = +document.getElementById("userInput").value
+        firstNumber = +userInput.value
         //console.log(firstNumber);
         // currentNumber = firstNumber;
 
     } else {
-        secondNumber = +document.getElementById("userInput").value;
+        secondNumber = +userInput.value;
         // console.log(secondNumber);
         // currentNumber = secondNumber;
-
     }
 
     //console.log(action);
@@ -23,11 +47,13 @@ function clickNumber(number) {
 }
 
 function clickMethod(doIt) {
+    firstNumber = Number(userInput.value);
     action = doIt;
+    userInput.value = "";
+    decimalClicked = false;
+    userInput.focus();
 
     //console.log(action);
-    document.getElementById("userInput").value = "";
-    decimalClicked = false;
 
     //console.log(firstNumber);
 }
@@ -56,39 +82,47 @@ function result() {
             tempResult = firstNumber;
             break;
     }
-    document.getElementById("userInput").value = tempResult
+    userInput.value = tempResult
     firstNumber = tempResult;
 }
 
 
 function clean() {
-    document.getElementById("userInput").value = "";
+    userInput.value = "";
     firstNumber = secondNumber = action = null;
     decimalClicked = false;
 }
 
 function deleteLast() {
-    let userInput = document.getElementById("userInput").value;
-    document.getElementById("userInput").value = userInput.slice(0, -1);
+    userInput.value = userInput.value.slice(0, -1);
 }
 
 function clickSign() {
-    let currentNumber = Number(document.getElementById("userInput").value);
+    let currentNumber = Number(userInput.value);
     currentNumber = -currentNumber;
-    firstNumber = currentNumber
+
+    if (action == null) {
+        firstNumber = currentNumber;
+    } else {
+        secondNumber = currentNumber;
+    }
+
+    userInput.value = currentNumber;
+
+
+
     /*     console.log(`currentNumber ${currentNumber}`);
         console.log(`firstNumber ${firstNumber}`); */
-    document.getElementById("userInput").value = currentNumber;
 }
 
 function clickDecimal() {
     if (!decimalClicked) {
-        let currentValue = document.getElementById("userInput").value;
+        let currentValue = userInput.value;
         // Добавляем "0.", если текущее значение пустое
         if (currentValue === "") {
             currentValue = "0";
         }
-        document.getElementById("userInput").value = currentValue + ".";
+        userInput.value = currentValue + ".";
         decimalClicked = true;
     }
 }

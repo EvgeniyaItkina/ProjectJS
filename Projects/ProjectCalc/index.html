@@ -10,7 +10,7 @@
 
 <body>
     <div class="container">
-        <input type="text" id="userInput">
+        <input type="text" step="any" id="userInput">
         <div class="calculator">
             <button onclick="clickNumber(1)">1</button>
             <button onclick="clickNumber(2)">2</button>
@@ -31,12 +31,12 @@
 
             <button onclick="clickSign()">+/-</button>
             <button onclick="clickNumber(0)">0</button>
-            <button onclick="clickDecimal()">,</button>
+            <button onclick="clickNumber('.')">,</button>
             <button onclick="clickMethod('/')">/</button>
 
             <button id="clean" onclick="clean()">Clean</button>
             <button id="none"></button>
-            <button id="delite" onclick="deleteLast()">Delete</button>
+            <button id="delete" onclick="deleteLast()">Delete</button>
             <button onclick="result()">=</button>
 
         </div>
@@ -44,7 +44,7 @@
     </div>
 
 
-    <script src="./script/calculProject.js"></script>
+    <script src="./script/newCalc.js"></script>
 
 </body>
 

@@ -27,7 +27,10 @@ export function save() {
                 fontSize: element.style.fontSize,
                 color: element.style.color,
                 padding: element.style.padding,
-                margin: element.style.margin
+                margin: element.style.margin,
+                boxShadowX: element.style.boxShadowX,
+                boxShadowY: element.style.boxShadowY,
+                boxShadowBlur: element.style.boxShadowBlur
             }
         };
         elementsData.push(elementData);

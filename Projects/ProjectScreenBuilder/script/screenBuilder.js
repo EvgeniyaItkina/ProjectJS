@@ -23,6 +23,9 @@ document.querySelector('.btn_clear').addEventListener('click', () => {
         document.getElementById("radiusBorder").value = "";
         document.getElementById("padding").value = "";
         document.getElementById("margin").value = "";
+        document.getElementById("boxShadowX").value = "";
+        document.getElementById("boxShadowY").value = "";
+        document.getElementById("boxShadowBlur").value = "";
         document.querySelector('.massageClear').style.display = "none";
         localStorage.clear()
     })
