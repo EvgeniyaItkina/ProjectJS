@@ -1,5 +1,5 @@
 const userInput = document.getElementById("userInput");
-let firstNumber, secondNumber, action, checkNumber, resultComputed = false;
+let firstNumber, action, checkNumber, resultComputed = false;
 function clickNumber(inputNewElement) {
     if (resultComputed) {
         resultComputed = false;
@@ -7,10 +7,10 @@ function clickNumber(inputNewElement) {
     }
     userInput.value += inputNewElement;
 
-    if (Number(userInput.value) == userInput.value) {
-        checkNumber = userInput.value
-    } else {
+    if (isNaN(Number(userInput.value))) {
         userInput.value = checkNumber
+    } else {
+        checkNumber = userInput.value
     }
 
 }
@@ -40,7 +40,6 @@ function clickSign() {
 function clean() {
     userInput.value = "";
     firstNumber = ""
-    secondNumber = ""
     action = null;
 }
 
@@ -48,6 +47,7 @@ function deleteLast() {
     userInput.value = userInput.value.slice(0, -1);
 }
 function result() {
+    if (!firstNumber) return
     let tempResult;
     let num1 = Number(firstNumber);
     let num2 = Number(userInput.value);
@@ -65,7 +65,12 @@ function result() {
             break;
 
         case ('/'):
-            tempResult = num1 / num2
+            if (num2 == 0) {
+                tempResult = "NaN"
+            } else {
+
+                tempResult = num1 / num2
+            }
             break;
 
         default:
