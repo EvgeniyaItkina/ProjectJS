@@ -90,7 +90,7 @@ body {
     padding: 10px;
     background-color: #ddd;
     border-radius: 50%;
-    font-size: 6em;
+    font-size: 3em;
     font-weight: bold;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 15);
     position: absolute;
@@ -100,6 +100,52 @@ body {
     bottom: 0;
     margin: auto;
 
+}
+
+.game-over {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.game-over img {
+    max-width: 240px;
+    margin-right: 20px;
+}
+
+.game-over .message {
+    font-size: 20px;
+    color: #333;
+    flex-grow: 1;
+    text-align: center;
+}
+
+#innerBox {
+    display: flex;
+    flex-direction: column;
+}
+
+#closeButton {
+    display: block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #ff4444;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#closeButton:hover {
+    background-color: #cc0000;
 }
 
 .start-button {
