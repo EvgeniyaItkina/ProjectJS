@@ -163,3 +163,53 @@ body {
 .start-button:hover {
     background-color: #e0e0e0;
 }
+
+@media (max-width: 600px) {
+    .simon-game {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 20px;
+        width: 90%;
+        height: auto;
+    }
+
+    .color-button {
+        width: 100%;
+        height: 150px;
+    }
+
+    .game-over {
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        width: 180px;
+    }
+
+    .game-over img {
+        margin: auto;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    #score {
+        width: 150px;
+        height: 150px;
+        font-size: 1em;
+    }
+
+    #innerBox {
+        width: 100%;
+    }
+
+    #closeButton,
+    .start-button {
+        width: 100%;
+    }
+
+    body,
+    .start-button {
+        padding: 5px;
+    }
+}
