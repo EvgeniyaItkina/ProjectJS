@@ -12,24 +12,16 @@ function clickNumber(inputNewElement) {
     } else {
         checkNumber = userInput.value
     }
-
 }
 
 function clickMethod(sign) {
-    console.log(`firstNumber ${firstNumber}`);
-    console.log(`userInput ${userInput.value}`);
-    console.log(`action ${action}`);
-    console.log(`sign ${sign}`);
-
     if (action) {
         result()
-
     } else {
         firstNumber = userInput.value;
     }
     action = sign;
     userInput.value = "";
-    console.log(`firstNumber ${firstNumber}`);
 }
 
 function clickSign() {

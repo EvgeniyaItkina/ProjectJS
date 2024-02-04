@@ -17,3 +17,4 @@ const search = async (countryName) => {
 }
 
 export { getNameCountries, search }
+

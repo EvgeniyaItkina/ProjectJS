@@ -1,8 +1,6 @@
 export function createElement() {
     const selectedElement = document.getElementById("element");
     const element = selectedElement.options[selectedElement.selectedIndex].value;
-
-
     const bgColor = document.getElementById("bgColor").value;
     const width = document.getElementById("width").value;
     const height = document.getElementById("height").value;

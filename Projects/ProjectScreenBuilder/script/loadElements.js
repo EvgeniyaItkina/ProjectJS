@@ -1,12 +1,11 @@
 export function loadElements() {
     // Обработчик для кнопки загрузки
-
-    document.querySelector('.massageLoad').style.display = "block";
+    document.querySelector('.messageLoad').style.display = "block";
 
 
     // Обработчик для подтверждающей кнопки
     document.getElementById('yesLoad').addEventListener('click', () => {
-        document.querySelector('.massageLoad').style.display = "none";
+        document.querySelector('.messageLoad').style.display = "none";
 
         const whiteSheet = document.getElementById('whiteSheet')
         const localStorageData = localStorage.getItem('savedElements')
@@ -26,18 +25,17 @@ export function loadElements() {
 
     // Обработчик для отклоняющей кнопки
     document.getElementById('noLoad').addEventListener('click', () => {
-        document.querySelector('.massageLoad').style.display = "none";
+        document.querySelector('.messageLoad').style.display = "none";
     });
 }
 
 
 export function load() {
-    document.querySelector('.massageLoad').style.display = "block";
-
+    document.querySelector('.messageLoad').style.display = "block";
 
     // Обработчик для подтверждающей кнопки
     document.getElementById('yesLoad').addEventListener('click', () => {
-        document.querySelector('.massageLoad').style.display = "none";
+        document.querySelector('.messageLoad').style.display = "none";
 
         const whiteSheet = document.getElementById('whiteSheet')
         const localStorageData = localStorage.getItem('savedElements')
@@ -52,12 +50,11 @@ export function load() {
                 whiteSheet.appendChild(newElement);
             });
         }
-
     });
 
     // Обработчик для отклоняющей кнопки
     document.getElementById('noLoad').addEventListener('click', () => {
-        document.querySelector('.massageLoad').style.display = "none";
+        document.querySelector('.messageLoad').style.display = "none";
     });
 };
 

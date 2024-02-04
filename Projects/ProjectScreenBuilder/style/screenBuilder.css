@@ -92,13 +92,17 @@ textarea {
     transition: background-color 0.3s, transform 0.2s;
 }
 
+.btn_clear {
+    background-color: red;
+}
+
 .btn:hover {
     background-color: #0056b3;
     transform: scale(1.05);
 }
 
-.massageClear,
-.massageLoad {
+.messageClear,
+.messageLoad {
     display: none;
     position: absolute;
     text-align: center;
@@ -116,8 +120,8 @@ textarea {
     z-index: 1000;
 }
 
-.massageClear p,
-.massageLoad p {
+.messageClear p,
+.messageLoad p {
     margin: 10px 0;
 }
 
@@ -125,13 +129,13 @@ textarea {
 label,
 .box1 label,
 .btn,
-.massageClear p,
-.massageLoad p {
+.messageClear p,
+.messageLoad p {
     font-size: 0.8em;
 }
 
-.massageClear button,
-.massageLoad button {
+.messageClear button,
+.messageLoad button {
     cursor: pointer;
     margin-top: 20px;
     padding: 5px 15px;
@@ -142,8 +146,8 @@ label,
     transition: background-color 0.3s;
 }
 
-.massageClear button:hover,
-.massageLoad button:hover {
+.messageClear button:hover,
+.messageLoad button:hover {
     background-color: #0056b3;
 }
 
@@ -175,8 +179,8 @@ label,
     h1,
     label,
     .btn,
-    .massageClear p,
-    .massageLoad p {
+    .messageClear p,
+    .messageLoad p {
         font-size: 0.8em;
     }
 
@@ -186,8 +190,8 @@ label,
         height: 100%;
     }
 
-    .massageClear,
-    .massageLoad {
+    .messageClear,
+    .messageLoad {
         left: 50%;
         transform: translateX(-50%);
         width: 80%;

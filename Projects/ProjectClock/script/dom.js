@@ -1,6 +1,5 @@
 import { getNameCountries, search } from "./countryData.js";
 
-
 document.getElementById('searchButton').addEventListener('click', async () => {
     document.getElementById('countryInfo').style.display = "block";
     const countryName = document.getElementById('countryInput').value;
@@ -11,6 +10,26 @@ document.getElementById('searchButton').addEventListener('click', async () => {
         document.getElementById('countryCapital').textContent = `Capital: ${countryInfo.capital}`;
         document.getElementById('countryFlag').innerHTML = `<img src="${countryInfo.flags.svg}" alt="Flag" width="100">`;
         updateCurrentTime(countryInfo.timezones[0]);
+        if (countryInfo.timezones.length > 1) {
+            let modal = document.getElementById("myModal");
+            modal.style.display = "block";
+
+            // Получаем элемент <span>, который закрывает модальное окно
+            let span = document.getElementsByClassName("close")[0];
+
+
+            // Когда пользователь нажимает на <span> (x), закрыть модальное окно
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+
+            // Когда пользователь нажимает в любом месте за пределами модального окна, закрыть его
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        }
     } else {
         alert("Country not found!");
     }
@@ -36,24 +55,12 @@ const updateCurrentTime = (timezone = "") => {
     }
     updateTime(newHours);
     timeInterval = setInterval(() => updateTime(newHours), 1000);
-    /* setInterval(updateTime, 1000, newHours); */
 }
-
-/* const updateTime = (offSet) => {
-    const nowTime = new Date();
-    const hoursFromDate = nowTime.getHours();
-    const newHours = hoursFromDate + offSet;
-    nowTime.setHours(newHours);
-    console.log(nowTime);
-
-    document.getElementById('currentTime').innerHTML = "";
-    document.getElementById('currentTime').innerHTML = `Current Time: ${nowTime}`;
-} */
 
 const updateTime = (offSet) => {
     const nowTime = new Date();
-    nowTime.setHours(nowTime.getHours() + offSet);
-
+    nowTime.setHours(nowTime.getHours() + offSet - 2);
+    console.log(offSet);
     // Форматирование времени для отображения только часов и минут
     const formattedTime = nowTime.toLocaleTimeString('en-US', {
         hour: '2-digit',
