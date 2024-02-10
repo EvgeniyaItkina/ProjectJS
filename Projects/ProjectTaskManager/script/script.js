@@ -45,7 +45,38 @@ document.getElementById("deleteAll").addEventListener("click", () => {
 
 })
 
-//+ לסדר את המשימה בצורה נכונה
-//בלחיצה על מחיקה - הודעה על מחיכה כן/לא
-//
-//בלחיצה על כפתור סיום יש פרטי שעת סיום משימה
+//проверяем LS
+document.addEventListener('DOMContentLoaded', () => {
+    const tasks = localStorage.getItem('tasks');
+    if (tasks) {
+        showModal();
+    }
+});
+
+function showModal() {
+    document.getElementById('modal').style.display = 'block';
+}
+
+document.getElementById('downloadTasks').addEventListener('click', () => {
+    loadTasks();
+    hideModal();
+});
+
+document.getElementById('deleteTasks').addEventListener('click', () => {
+    localStorage.clear();
+    hideModal();
+});
+
+function hideModal() {
+    document.getElementById('modal').style.display = 'none';
+}
+
+function loadTasks() {
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+    const tableBody = document.querySelector(".users-table tbody");
+    tasks.forEach(task => {
+        const taskInstance = new Task(task.task, task.category, task.details, task.date, task.time); // Убедитесь, что конструктор Task принимает нужные аргументы
+        tableBody.appendChild(taskInstance.createTaskElement());
+    });
+}
+
