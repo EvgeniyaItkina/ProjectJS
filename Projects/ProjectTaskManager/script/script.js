@@ -49,13 +49,10 @@ document.getElementById("deleteAll").addEventListener("click", () => {
 document.addEventListener('DOMContentLoaded', () => {
     const tasks = localStorage.getItem('tasks');
     if (tasks) {
-        showModal();
+        document.getElementById('modal').style.display = 'block';
     }
 });
 
-function showModal() {
-    document.getElementById('modal').style.display = 'block';
-}
 
 document.getElementById('downloadTasks').addEventListener('click', () => {
     loadTasks();

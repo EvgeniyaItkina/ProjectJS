@@ -8,6 +8,7 @@ export class Task {
 
     constructor(task, category, details, date, time) {
         this.id = Date.now();
+        console.log(new Date(this.id));
         this.task = task;
         this.category = category;
         this.details = details;
