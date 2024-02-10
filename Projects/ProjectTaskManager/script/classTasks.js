@@ -4,19 +4,22 @@ export class Task {
     details;
     date;
     time
+    row;
 
     constructor(task, category, details, date, time) {
+        this.id = Date.now();
         this.task = task;
         this.category = category;
         this.details = details;
         this.date = date;
         this.time = time;
+        this.row = null;
     }
 
     createTaskElement() {
         // Создание строки таблицы
         const row = document.createElement("tr");
-
+        this.row = row;
         // Создание и заполнение ячеек таблицы для каждого атрибута задачи
         row.appendChild(this.createCell(this.task));
         row.appendChild(this.createCell(this.category));
@@ -56,14 +59,50 @@ export class Task {
         const button = document.createElement('button');
         button.textContent = text;
         button.className = `btn ${className}`;
+
+        if (className === 'btn_start') {
+            button.addEventListener('click', () => this.startTask());
+        } else if (className === 'btn_finish') {
+            button.addEventListener('click', () => this.finishTask());
+        } else if (className === 'btn_change') {
+            button.addEventListener('click', () => this.change());
+        } else if (className === 'btn_delete') {
+            button.addEventListener('click', () => this.deleteElement());
+        }
+
         return button;
     }
-    startTask() { }
-    finishTask() { }
-    change() { }
 
-    deleteElement() {
-
+    startTask() {
+        for (let i = 0; i < 5; i++) {
+            this.row.cells[i].style.backgroundColor = "#FFFF00"; // Желтый цвет
+        }
     }
 
+    finishTask() {
+        for (let i = 0; i < 5; i++) {
+            this.row.cells[i].style.opacity = "0.5";
+        }
+    }
+
+    change() {
+        document.getElementById("task").value = this.task;
+        document.getElementById("category").value = this.category;
+        document.getElementById("details").value = this.details;
+        document.getElementById("date").value = this.date;
+        document.getElementById("time").value = this.time;
+        this.deleteElement();
+    }
+
+    deleteElement() {
+        // Удаление элемента из DOM
+        this.row.remove();
+
+        this.removeTaskFromLocalStorage(this.id);
+    }
+    removeTaskFromLocalStorage(taskId) {
+        let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+        tasks = tasks.filter(task => task.id !== taskId);
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+    }
 }
