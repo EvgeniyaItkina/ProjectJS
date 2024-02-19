@@ -67,7 +67,7 @@ nav {
 }
 
 .nav-home li {
-    margin: 20px;
+    margin: 10px;
 }
 
 /* Стили для выпадающего меню */
@@ -95,7 +95,6 @@ nav {
 
 .nav-project:hover .dropdown-menu {
     display: block;
-    width: 200PX;
 }
 
 .dropdown-menu a:hover {

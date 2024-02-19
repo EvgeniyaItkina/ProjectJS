@@ -77,7 +77,7 @@ nav {
 
 .nav-project:hover .dropdown-menu {
     display: block;
-    width: 200PX;
+    width: 240px;
 }
 
 .dropdown-menu a:hover {
