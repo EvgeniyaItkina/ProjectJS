@@ -1,63 +1,59 @@
 # My FullStack Journey
 
-Welcome to my first project after completing 2-month block of a FullStack web development course. During this period, I acquired foundational programming languages and skills without any prior knowledge.
+Welcome to my evolving project portfolio following a 5-month intensive block of a FullStack web development course. Starting from scratch, I've acquired foundational skills in programming languages and web development technologies.
 
 ## Technologies Used
 
-In this journey, I've leveraged a variety of technologies to create web applications:
+Throughout this journey, I've utilized a range of technologies to build various web applications, including:
 
-- **HTML:** The backbone of web content.
-- **CSS:** For styling and layout.
-- **SASS:** Used extensively in the "Galery" project for efficient CSS development.
-- **Bootstrap:** Employed in the "Map" project and partially on the main page to enhance layout and design.
+- **HTML**: The essential building block of web content.
+- **CSS**: For styling and enhancing layout.
+- **SASS**: Extensively used in the "Gallery" project for efficient CSS development.
+- **Bootstrap**: Applied in the "Map" project and partially on the main page for responsive design.
+- **JavaScript**: Encompassing API requests, DOM manipulation, callback functions, and local storage. Also explored the canvas for dynamic web elements.
+- **TypeScript**: Leveraged for adding static type definitions to JavaScript, enhancing code quality and maintainability.
+- **OOP Concepts**: Applied Object-Oriented Programming principles across projects to structure code more efficiently and logically.
 
-## About the Projects
+## Projects Overview
 
 ### Main Page
 
-The main page serves as a showcase for all the projects I've worked on over the past month. Among these projects, four were meticulously crafted based on provided design layouts, while the remaining two represent my own creative expressions and the result of diligent independent work.
+The main page serves as a showcase for all projects, highlighting my ability to translate design layouts into functional web applications. It demonstrates selective Bootstrap application for enhanced user experience.
 
-One of the highlights of this page is the demonstration of how Bootstrap can be selectively applied to enhance specific parts of a project, contributing to a polished and cohesive user experience. 
+### Project Coffee 
+A foundational project that emphasized design alignment and responsiveness, under mentorship guidance.
 
-This page encapsulates the journey of learning and practical application of web development skills, marking a significant milestone in my FullStack developer journey.
-
-
-### Project Coffee
-
-Despite being the simplest of the assigned projects, Project Coffee played a crucial role in my learning journey. With guidance from my mentor, I not only initiated the project but also independently refined it to align perfectly with the provided design layout. Additionally, I worked extensively to ensure its responsiveness.
-
-### Project Galery
-
-Project Galery showcases my proficiency in SASS, a powerful CSS preprocessor. I've used SASS to streamline the styling process and create a visually appealing gallery. It demonstrates my ability to work with advanced CSS techniques..
-
-In addition to that, I took the design to the next level by adding styles to the images and frames that give the impression of real paintings.
+### Project Gallery
+Demonstrates SASS proficiency for advanced CSS styling, creating a visually appealing image gallery.
 
 ### Project Map
-
-In Project Map, I integrated the Bootstrap library to enhance the user interface and provide a smooth user experience. Bootstrap's components and responsive design capabilities were instrumental in creating a functional map application.
+Utilizes Bootstrap for UI/UX enhancement in a functional map application.
 
 ### Project HereNow
-
-Project HereNow showcases my versatility in web development. I've added different styles for various breakpoints in the mobile version, ensuring a seamless and engaging user experience.
+Focuses on mobile responsiveness with various styles for different breakpoints.
 
 ### Additional Projects
+- **Project Cat & Project Nurse**: My original creations, featuring user interaction through animations.
+- **Project Model**: Offers a solution for viewing larger images with a simple, stylish design.
 
-On my website, you'll also find two additional projects: "Project Cat" and "Project Nurse," which were entirely designed and developed by me. These projects showcase my proficiency in web development and encompass various features, including user-triggered animations and keyframes-driven automatic animations. 
+## Newly Added Projects
 
-### Project "Model"
-In modern web development, there are many scenarios where you need to create target pages where users can view larger images by hovering over certain elements. In this project, within a simple and stylish design, I provide a convenient and intuitive solution for adding new images while maintaining a cohesive aesthetic.
+- **Project Screen Builder**: A modular design approach with enhanced HTML knowledge. Uses local storage for data management.
+- **Project Clock**: Implements API for real-time information on capital cities and flags, with timezone adjustments.
+- **Project Simon**: Employs asynchronous technology with a unique outcome display upon game loss.
+- **Project Task Manager**: Combines DOM manipulation, local storage, and OOP principles for task management.
+- **Project Calculator**: Utilizes callback functions and switch cases for a functional calculator interface.
+- **Project Snake**: A complex, self-taught project using the canvas, with consideration for mobile responsiveness.
 
-## What I've Achieved
+## Achievements
 
-- Developed web applications from scratch.
-- Applied responsive design principles for a seamless user experience.
-- Leveraged SASS for efficient and maintainable CSS in Project Galery.
-- Utilized Bootstrap to enhance the layout and styling in Project Map and parts of the main page.
-- Gained valuable experience in problem-solving and debugging.
-- Demonstrated my commitment to continuous learning and self-improvement.
+- Developed and refined web applications from scratch.
+- Applied responsive design principles across projects for an optimal user experience.
+- Enhanced layout and styling using Bootstrap and SASS.
+- Addressed complex web development scenarios using JavaScript, and the canvas.
 
 ## Conclusion
 
-This project reflects not only the technical skills I've acquired but also the dedication and hard work I've put into my web development journey. It's just the beginning, and I'm excited to take on more challenging projects and continue honing my skills as a FullStack developer.
+This portfolio not only showcases my technical skills but also my dedication to learning and improving as a FullStack developer. I look forward to tackling more challenging projects and continuing my journey in web development.
 
-Thank you for checking out my project!
+Thank you for exploring my projects!
