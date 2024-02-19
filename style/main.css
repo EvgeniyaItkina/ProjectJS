@@ -405,7 +405,7 @@ screen and (max-width:576px),
 screen and (max-width:1200px) {
     .nav-home {
         display: none;
-        margin: 300px 0 0 50%;
+        margin: 240px 0 0 50%;
         background-color: #ccc;
         font-size: 1em;
     }
