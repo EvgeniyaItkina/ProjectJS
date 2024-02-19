@@ -44,6 +44,14 @@ Focuses on mobile responsiveness with various styles for different breakpoints.
 - **Project Task Manager**: Combines DOM manipulation, local storage, and OOP principles for task management.
 - **Project Calculator**: Utilizes callback functions and switch cases for a functional calculator interface.
 - **Project Snake**: A complex, self-taught project using the canvas, with consideration for mobile responsiveness.
+- **Project Marry Me**
+A playful and engaging web application designed to capture a memorable moment with a simple yet impactful interaction. Developed using TypeScript, this project introduces dynamic behaviors and audio responses to user choices, enhancing the interactive experience.
+
+Dynamic Interaction: Features an evasive "No" button, creating a humorous challenge that encourages a positive response.
+Audio Integration: Two distinct audio tracks play based on the user's decision, adding depth to the interaction.
+TypeScript: Utilizes TypeScript for improved code reliability and maintainability.
+
+This project combines technical proficiency with creative design to offer a unique user experience.
 
 ## Achievements
 
